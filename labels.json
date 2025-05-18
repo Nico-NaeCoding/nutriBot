@@ -1,0 +1,20 @@
+[
+    {
+        "name": "전한나",
+        "color": "FF6961"
+    },
+    {
+        "name": "이수진",
+        "color": "FFFACD"
+    },
+    {
+        "name": "김해진",
+        "color": "87CEEB",
+        "description": "팀원"
+    },
+    {
+        "name": "박소정",
+        "color": "353839",
+        "description": "팀원"
+    }
+]

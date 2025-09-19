@@ -1,19 +1,26 @@
-from flask import Flask, jsonify
+from flask import Flask
 from flask_cors import CORS
-import os
+import models
+
 
 def create_app():
     app = Flask(__name__)
-    CORS(app, supports_credentials=True)
+    CORS(app)
+    app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///nutri.db"
+    app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
-    @app.get("/health")
-    def health():
-        return jsonify(status="ok")
+    models.db.init_app(app)
 
+    with app.app_context():
+        models.db.create_all()
+
+    from routes import bp
+
+    app.register_blueprint(bp)
     return app
+
 
 app = create_app()
 
 if __name__ == "__main__":
-    # 개발용 실행: python app.py
-    app.run(host="0.0.0.0", port=int(os.getenv("PORT", 5000)), debug=True)
+    app.run(debug=True)

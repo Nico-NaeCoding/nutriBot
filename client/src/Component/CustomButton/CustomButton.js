@@ -13,7 +13,7 @@ const CustomButton = ({ ButtonOnClick, ButtonMessage, fullWidth = false }) => {
                 },
                 px: 10,
                 py: 2,
-                fontSize: "1.4em",
+                fontSize: "1.3em",
                 borderRadius: "12px",
             }}
         >

@@ -11,7 +11,7 @@ export const Container = styled.div`
 
 export const PersonalInfoContainer = styled.div`
     text-align: center;
-    width: 25%;
+    width: 20%;
     display: flex;
     flex-direction: column;
     height: 60%;
@@ -25,11 +25,11 @@ export const PersonalInfoContainer = styled.div`
 export const PersonalInfoTitle = styled.div`
     display: flex;
     align-items: center;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: bold;
     gap: 5%;
 `;
 
 export const TitleImage = styled.img`
-    width: 40px;
+    width: 35px;
 `;

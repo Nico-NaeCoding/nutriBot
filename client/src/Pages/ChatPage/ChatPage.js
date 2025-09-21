@@ -76,6 +76,7 @@ function ChatPage() {
                         }}
                     />
                     <Button
+                        variant="contained"
                         sx={{
                             backgroundColor: "#059669",
                             "&:hover": {

@@ -78,7 +78,47 @@ export const TopDescription = styled.div`
 
 export const ChattingCenter = styled.div`
     display: flex;
+    padding: 3%;
+    overflow-y: auto;
+    max-height: 50vh;
+`;
+
+export const ChatImage = styled.img`
+    width: 28px;
+    height: 28px;
+    border-radius: 100%;
+    background-color: #e5e7eb;
+    padding: 1%;
+`;
+
+export const Messages = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 22px;
+`;
+
+export const MessageRow = styled.div`
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: ${(p) => (p.$isUser ? "flex-end" : "flex-start")};
+    gap: 2%;
     width: 100%;
+`;
+
+export const Bubble = styled.div`
+    max-width: 70%;
+    white-space: pre-wrap;
+    word-break: break-word;
+    padding: 2%;
+    border-radius: 20px;
+    border-top-left-radius: ${(p) => (p.$isUser ? "20px" : "1px")};
+    border-bottom-right-radius: ${(p) => (p.$isUser ? "1px" : "20px")};
+    background: ${(p) => (p.$isUser ? "#059669" : "white")};
+    color: ${(p) => (p.$isUser ? "white" : "#111827")};
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+    border: 1px solid #e5e7eb;
 `;
 
 export const ChattingBottom = styled.div`

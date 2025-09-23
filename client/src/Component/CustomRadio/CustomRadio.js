@@ -17,6 +17,11 @@ const CustomRadio = ({ value, onChange, options }) => {
                         />
                     }
                     label={opt.label}
+                    sx={{
+                        "& .MuiFormControlLabel-label": {
+                            fontSize: "1.4rem",
+                        },
+                    }}
                 />
             ))}
         </RadioGroup>

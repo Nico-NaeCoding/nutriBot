@@ -44,7 +44,7 @@ export const ChattingContainer = styled.div`
     border: 1px solid #e5e7eb;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
-    height: 95%;
+    height: 100%;
 `;
 
 export const ChattingTop = styled.div`

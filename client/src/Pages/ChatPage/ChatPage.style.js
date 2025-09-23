@@ -1,4 +1,10 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const blinkAnimation = keyframes`
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+`;
 
 export const Container = styled.div`
     display: flex;
@@ -13,7 +19,7 @@ export const Container = styled.div`
 `;
 
 export const PersonalInfoContainer = styled.div`
-    width: 20%;
+    width: 25%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -40,7 +46,7 @@ export const TitleImage = styled.img`
 export const ChattingContainer = styled.div`
     display: flex;
     flex-direction: column;
-    width: 80%;
+    width: 75%;
     border: 1px solid #e5e7eb;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
@@ -140,4 +146,58 @@ export const ChattingBottom = styled.div`
 
 export const SendImage = styled.img`
     width: 30px;
+`;
+//////////
+export const Chatbot = styled.div`
+    display: flex;
+    gap: 1%;
+    justify-content: flex-start;
+    align-items: flex-start;
+`;
+
+export const LoadingIndicator = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    color: gray;
+    height: 50%;
+
+    &::after {
+        content: "...";
+        animation: ${blinkAnimation} 1.5s infinite;
+    }
+`;
+
+export const Profile = styled.img`
+    width: 4rem;
+    height: 5rem;
+`;
+
+export const Answer = styled.div`
+    background-color: #ffffff;
+    width: 35%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 1.5%;
+    height: auto;
+    font-size: 1.1rem;
+    word-wrap: break-word;
+`;
+
+export const User = styled.div`
+    display: flex;
+    justify-content: flex-end;
+`;
+
+export const Question = styled.div`
+    width: 35%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 1.5%;
+    height: auto;
+    color: #ffffff;
+    font-size: 1.1rem;
+    word-wrap: break-word;
+    background-color: ${(props) => (props.$switchState ? "#2196f3" : "#505050")};
 `;

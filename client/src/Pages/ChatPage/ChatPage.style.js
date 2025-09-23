@@ -2,24 +2,27 @@ import styled from "styled-components";
 
 export const Container = styled.div`
     display: flex;
-    align-items: center;
-    justify-content: space-around;
-    width: 100%;
-    height: 100vh;
-    background-color: #f9fafb;
+    // align-items: center;
+    justify-content: center;
+    // width: 100%;
+    height: 80vh;
+    // background-color: #f9fafb;
+    padding: 2%;
+    // margin-top: 3%;
+    gap: 3%;
 `;
 
 export const PersonalInfoContainer = styled.div`
-    text-align: center;
     width: 20%;
     display: flex;
     flex-direction: column;
-    height: 60%;
     justify-content: space-between;
     border: 1px solid #e5e7eb;
     border-radius: 15px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     padding: 2%;
+    height: 70%;
+    // gap: 10%;
 `;
 
 export const PersonalInfoTitle = styled.div`
@@ -37,10 +40,11 @@ export const TitleImage = styled.img`
 export const ChattingContainer = styled.div`
     display: flex;
     flex-direction: column;
-    width: 60%;
+    width: 80%;
     border: 1px solid #e5e7eb;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
+    height: 95%;
 `;
 
 export const ChattingTop = styled.div`
@@ -77,10 +81,11 @@ export const TopDescription = styled.div`
 `;
 
 export const ChattingCenter = styled.div`
-    display: flex;
-    padding: 3%;
+    flex: 1;
     overflow-y: auto;
-    max-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    padding: 3%;
 `;
 
 export const ChatImage = styled.img`
@@ -96,6 +101,7 @@ export const Messages = styled.div`
     flex-direction: column;
     gap: 10px;
     font-size: 22px;
+    flex: 0;
 `;
 
 export const MessageRow = styled.div`
@@ -105,6 +111,7 @@ export const MessageRow = styled.div`
     justify-content: ${(p) => (p.$isUser ? "flex-end" : "flex-start")};
     gap: 2%;
     width: 100%;
+    flex: 1;
 `;
 
 export const Bubble = styled.div`

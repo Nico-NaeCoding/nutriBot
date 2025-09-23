@@ -72,6 +72,13 @@ function ChatPage() {
         }
     };
 
+    const handleInformSend = () => {
+        console.log("성별", gender);
+        console.log("나이", age);
+        console.log("키", height);
+        console.log("몸무게", weight);
+    };
+
     return (
         <>
             <Header />
@@ -93,7 +100,7 @@ function ChatPage() {
                     <CustomInput label="나이" value={age} onChange={(e) => setAge(e.target.value)} />
                     <CustomInput label="키(cm)" value={height} onChange={(e) => setHeight(e.target.value)} />
                     <CustomInput label="몸무게(kg)" value={weight} onChange={(e) => setWeight(e.target.value)} />
-                    <CustomButton ButtonMessage="내 정보 알려주기" fullWidth />
+                    <CustomButton ButtonMessage="내 정보 알려주기" ButtonOnClick={handleInformSend} fullWidth />
                 </PersonalInfoContainer>
 
                 {/* 채팅창 */}

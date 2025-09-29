@@ -1,4 +1,4 @@
-import { Button } from "@mui/material";
+import { Button } from '@mui/material';
 
 const CustomButton = ({ ButtonOnClick, ButtonMessage, fullWidth = false }) => {
     return (
@@ -7,14 +7,14 @@ const CustomButton = ({ ButtonOnClick, ButtonMessage, fullWidth = false }) => {
             variant="contained"
             fullWidth={fullWidth}
             sx={{
-                backgroundColor: "#059669",
-                "&:hover": {
-                    backgroundColor: "#047857",
+                backgroundColor: '#059669',
+                '&:hover': {
+                    backgroundColor: '#047857',
                 },
                 px: 9,
                 py: 2,
-                fontSize: "1.3em",
-                borderRadius: "12px",
+                fontSize: '1.3em',
+                borderRadius: '12px',
             }}
         >
             {ButtonMessage}

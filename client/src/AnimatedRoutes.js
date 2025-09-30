@@ -1,16 +1,16 @@
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
-import { AnimatePresence, motion } from 'framer-motion';
-import MainPage from './Pages/MainPage/MainPage';
-import ChatPage from './Pages/ChatPage/ChatPage';
+import { motion } from 'framer-motion';
+import { Routes, Route, useLocation } from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion';
 
-// 경로에 따라 애니메이션 적용할 컴포넌트
+import Home from './Pages/Home'; // 경로 확인 필요
+import Chat from './Pages/Chat'; // 경로 확인 필요
+
 function AnimatedRoutes() {
     const location = useLocation();
 
     return (
         <AnimatePresence mode="wait">
-            {/* key를 pathname + location.key로 수정 → 같은 경로 눌러도 애니메이션 재실행 */}
-            <Routes location={location} key={location.pathname + location.key}>
+            <Routes location={location} key={location.pathname}>
                 <Route
                     path="/"
                     element={
@@ -20,7 +20,7 @@ function AnimatedRoutes() {
                             exit={{ opacity: 0 }}
                             transition={{ duration: 0.5 }}
                         >
-                            <MainPage />
+                            <Home />
                         </motion.div>
                     }
                 />
@@ -33,7 +33,7 @@ function AnimatedRoutes() {
                             exit={{ x: -100, opacity: 0 }}
                             transition={{ duration: 0.4 }}
                         >
-                            <ChatPage />
+                            <Chat />
                         </motion.div>
                     }
                 />
@@ -42,12 +42,4 @@ function AnimatedRoutes() {
     );
 }
 
-function App() {
-    return (
-        <BrowserRouter>
-            <AnimatedRoutes />
-        </BrowserRouter>
-    );
-}
-
-export default App;
+export default AnimatedRoutes;

@@ -30,7 +30,7 @@
 | [전한나](https://github.com/jdy031017js) | [김해진](https://github.com/sunjinnn) | [박소정](https://github.com/sojeong0302) | [이수진](https://github.com/leesujin1209) |
 | :---: | :---: | :---: | :---: |
 | <img src="https://github.com/jdy031017js.png" width="80"/> | <img src="https://github.com/sunjinnn.png" width="80"/> | <img src="https://github.com/sojeong0302.png" width="80"/> | <img src="https://github.com/leesujin1209.png" width="80"/> |
-| **팀장**<br/>**프론트엔드** | **프롬프트<br/>엔지니어링** | **프론트엔드** | **AI**<br/>**프론트엔드** |
+| **팀장**<br/>**프론트엔드** | **프롬프트<br/>엔지니어링** | **프론트엔드** | **OpenAI API** |
 
 ## ✨ Features
 
